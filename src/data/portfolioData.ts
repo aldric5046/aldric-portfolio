@@ -5,7 +5,7 @@ export const personalInfo = {
   title: 'B.Tech Student in Computer Science & Engineering (AI)',
   college: 'Thejus Engineering College',
   location: 'Thrissur, Kerala, India',
-  email: 'aldric@example.com', // [Your email address]
+  email: 'aldricaldric88@gmail.com', // Aldric's contact email
   github: 'https://github.com/aldric5046', // Aldric's GitHub profile
   linkedin: 'https://linkedin.com/in/aldric', // [Your LinkedIn profile]
   instagram: 'https://instagram.com/aldric', // [Your Instagram handle]
@@ -239,8 +239,8 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'Email',
-    href: 'mailto:aldric@example.com', // [Your Email]
+    href: 'mailto:aldricaldric88@gmail.com',
     icon: 'Mail',
-    handle: 'aldric@example.com',
+    handle: 'aldricaldric88@gmail.com',
   },
 ];
