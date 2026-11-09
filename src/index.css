@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-dark: #050806;
+    --brand-green: #22c55e;
+    --brand-emerald: #10b981;
+  }
+
+  html {
+    scroll-behavior: auto; /* Handled by Lenis */
+    background-color: #050806;
+    color: #f8fafc;
+  }
+
+  body {
+    background-color: #050806;
+    color: #f8fafc;
+    overflow-x: hidden;
+  }
+
+  /* Custom sleek dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #050806;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #152419;
+    border-radius: 9999px;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #22c55e;
+  }
+}
+
+/* Glassmorphism surfaces matching reference */
+.glass-panel {
+  background: rgba(10, 16, 11, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(34, 197, 94, 0.12);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(12, 19, 13, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(34, 197, 94, 0.14);
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.55), inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 16px 40px -8px rgba(34, 197, 94, 0.15), 0 0 20px -2px rgba(34, 197, 94, 0.2);
+}
+
+.glass-pill {
+  background: rgba(15, 25, 17, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(34, 197, 94, 0.18);
+}
+
+/* Vibrant glowing green gradient text */
+.text-gradient-green {
+  background: linear-gradient(135deg, #ffffff 40%, #4ade80 85%, #22c55e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #86efac 0%, #22c55e 50%, #15803d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Background atmospheric radial glows */
+.bg-glow-radial {
+  background-image: 
+    radial-gradient(circle at 80% 10%, rgba(34, 197, 94, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 15% 45%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
+}
+
+/* Subtle diagonal grid pattern */
+.bg-diagonal-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+}
+
+/* Lenis smooth scroll helper */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
