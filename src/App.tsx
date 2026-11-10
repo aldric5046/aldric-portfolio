@@ -11,7 +11,6 @@ import { TechMarquee } from './components/TechMarquee';
 import { StatsSection } from './components/StatsSection';
 import { AboutSection } from './components/AboutSection';
 import { FeaturesSection } from './components/FeaturesSection';
-import { ProjectsSection } from './components/ProjectsSection';
 import { JourneyTimeline } from './components/JourneyTimeline';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -62,7 +61,7 @@ export const App: React.FC = () => {
 
   // Intersection Observer for Active Section Highlight
   useEffect(() => {
-    const sections = ['hero', 'about', 'skills', 'projects', 'journey', 'contact'];
+    const sections = ['hero', 'about', 'skills', 'journey', 'contact'];
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -122,7 +121,7 @@ export const App: React.FC = () => {
       {/* Main Content */}
       <main className="w-full relative">
         {/* 01. Hero with Bento Grid & 3D Polyhedron */}
-        <Hero onExploreClick={() => handleNavigate('projects')} />
+        <Hero onExploreClick={() => handleNavigate('journey')} />
 
         {/* 02. Infinite Tech Stack Marquee */}
         <TechMarquee />
@@ -134,12 +133,9 @@ export const App: React.FC = () => {
         <AboutSection />
 
         {/* 05. Skills / "What I Do" (3 Feature Cards + 1 Large 3D Organic Sphere Card) */}
-        <FeaturesSection onExploreProjects={() => handleNavigate('projects')} />
+        <FeaturesSection onExploreProjects={() => handleNavigate('journey')} />
 
-        {/* 06. Featured Projects */}
-        <ProjectsSection />
-
-        {/* 07. Academic & Tech Journey Timeline */}
+        {/* 06. Academic & Tech Journey Timeline */}
         <JourneyTimeline />
 
         {/* 08. Contact Section & Direct Connect */}
