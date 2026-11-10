@@ -202,20 +202,6 @@ export const journeyData: JourneyMilestone[] = [
     ],
     badge: 'Foundation',
   },
-  {
-    period: '2026 – Ongoing',
-    title: 'Self-Directed Developer & Project Sprinting',
-    organization: 'Independent Learning & Open Source',
-    location: 'Remote',
-    description:
-      'Committed daily schedule to building web applications, exploring modern JavaScript frameworks, and training introductory ML models.',
-    highlights: [
-      'Mastered modern frontend tooling: Next.js, React, Tailwind CSS, TypeScript',
-      'Exploring PyTorch and Scikit-Learn for intelligent data modeling',
-      'Publishing code regularly on GitHub and building a public portfolio',
-    ],
-    badge: 'Continuous Growth',
-  },
 ];
 
 export const socialLinks: SocialLink[] = [
